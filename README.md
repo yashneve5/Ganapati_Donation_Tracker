@@ -2,6 +2,10 @@
 
 A comprehensive donation and expense tracking system for Ganpati Utsav celebrations with Firebase Firestore real-time database integration.
 
+## 🌐 Live Website
+
+➡️ [Visit the Live Site](https://ganpatitracker.netlify.app/)
+
 ## 🚀 Features
 
 ### Core Functionality

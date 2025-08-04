@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form Demo - Ganpati Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .demo-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .example-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .format-section {
+            background: #fff3cd;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .example-form {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            margin-top: 1rem;
+        }
+        
+        .example-field {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 3px solid #ff6b35;
+        }
+        
+        .field-label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+        
+        .field-value {
+            color: #ff6b35;
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+        
+        .field-note {
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-top: 0.25rem;
+        }
+        
+        .format-rule {
+            background: white;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 6px;
+            border-left: 3px solid #17a2b8;
+        }
+        
+        .rule-title {
+            font-weight: 600;
+            color: #17a2b8;
+            margin-bottom: 0.5rem;
+        }
+        
+        .rule-examples {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .valid-example {
+            color: #28a745;
+            font-family: monospace;
+        }
+        
+        .invalid-example {
+            color: #dc3545;
+            font-family: monospace;
+            text-decoration: line-through;
+        }
+        
+        .demo-button {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .demo-button:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+        
+        .success-indicator {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .demo-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-om"></i>
+                <span>Ganpati Tracker</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donation.html" class="nav-link">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donation-demo.html" class="nav-link active">Demo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Demo Content -->
+    <div class="demo-container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1><i class="fas fa-graduation-cap"></i> Donation Form Demo & Guide</h1>
+            <p style="font-size: 1.2rem; color: #666;">Learn the correct format for donation inputs</p>
+        </div>
+
+        <div class="demo-grid">
+            <!-- Example Section -->
+            <div class="example-section">
+                <h2><i class="fas fa-check-circle"></i> Perfect Example</h2>
+                <p>Here's exactly how to fill the donation form:</p>
+                
+                <div class="example-form">
+                    <div class="example-field">
+                        <div class="field-label">Name *</div>
+                        <div class="field-value">Rajesh Kumar</div>
+                        <div class="field-note">✅ Only letters, spaces, and dots</div>
+                    </div>
+                    
+                    <div class="example-field">
+                        <div class="field-label">Email (Optional)</div>
+                        <div class="field-value">rajesh@example.com</div>
+                        <div class="field-note">✅ Standard email format</div>
+                    </div>
+                    
+                    <div class="example-field">
+                        <div class="field-label">Phone (Optional)</div>
+                        <div class="field-value">+91 98765 43210</div>
+                        <div class="field-note">✅ 10-15 digits with optional formatting</div>
+                    </div>
+                    
+                    <div class="example-field">
+                        <div class="field-label">Wing *</div>
+                        <div class="field-value">A</div>
+                        <div class="field-note">✅ Single letter: A, B, C, D, or E</div>
+                    </div>
+                    
+                    <div class="example-field">
+                        <div class="field-label">Floor *</div>
+                        <div class="field-value">3</div>
+                        <div class="field-note">✅ Number between 0-50</div>
+                    </div>
+                    
+                    <div class="example-field">
+                        <div class="field-label">Flat *</div>
+                        <div class="field-value">302</div>
+                        <div class="field-note">✅ Numbers, plus signs, hyphens only</div>
+                    </div>
+                    
+                    <div class="example-field">
+                        <div class="field-label">Amount *</div>
+                        <div class="field-value">1001</div>
+                        <div class="field-note">✅ Between ₹1 and ₹10,00,000</div>
+                    </div>
+                    
+                    <div class="example-field">
+                        <div class="field-label">Payment Mode *</div>
+                        <div class="field-value">UPI</div>
+                        <div class="field-note">✅ Cash, UPI, Bank Transfer, Cheque, Online</div>
+                    </div>
+                    
+                    <div class="example-field">
+                        <div class="field-label">Date *</div>
+                        <div class="field-value">Today's date</div>
+                        <div class="field-note">✅ Today or any past date</div>
+                    </div>
+                    
+                    <div class="example-field">
+                        <div class="field-label">Note (Optional)</div>
+                        <div class="field-value">Ganpati Bappa Morya</div>
+                        <div class="field-note">✅ Maximum 500 characters</div>
+                    </div>
+                </div>
+                
+                <div class="success-indicator">
+                    <i class="fas fa-check-circle"></i> <strong>This format will work perfectly!</strong><br>
+                    Copy these examples and modify with your details.
+                </div>
+            </div>
+
+            <!-- Format Rules Section -->
+            <div class="format-section">
+                <h2><i class="fas fa-rules"></i> Validation Rules</h2>
+                <p>Follow these rules to avoid errors:</p>
+                
+                <div class="format-rule">
+                    <div class="rule-title">Name Field</div>
+                    <div class="rule-examples">
+                        <span class="valid-example">✅ Rajesh Kumar</span>
+                        <span class="invalid-example">❌ Rajesh123</span>
+                    </div>
+                    <small>Only letters, spaces, and dots allowed</small>
+                </div>
+                
+                <div class="format-rule">
+                    <div class="rule-title">Email Field</div>
+                    <div class="rule-examples">
+                        <span class="valid-example">✅ user@example.com</span>
+                        <span class="invalid-example">❌ invalid-email</span>
+                    </div>
+                    <small>Standard email format (optional field)</small>
+                </div>
+                
+                <div class="format-rule">
+                    <div class="rule-title">Phone Field</div>
+                    <div class="rule-examples">
+                        <span class="valid-example">✅ +91 9876543210</span>
+                        <span class="invalid-example">❌ 123abc</span>
+                    </div>
+                    <small>10-15 digits with optional formatting (optional field)</small>
+                </div>
+                
+                <div class="format-rule">
+                    <div class="rule-title">Wing Field</div>
+                    <div class="rule-examples">
+                        <span class="valid-example">✅ A, B, C, D, E</span>
+                        <span class="invalid-example">❌ Wing A, F, 1</span>
+                    </div>
+                    <small>Single uppercase letter only</small>
+                </div>
+                
+                <div class="format-rule">
+                    <div class="rule-title">Floor Field</div>
+                    <div class="rule-examples">
+                        <span class="valid-example">✅ 0, 1, 2, 10</span>
+                        <span class="invalid-example">❌ Ground, -1</span>
+                    </div>
+                    <small>Number between 0 and 50</small>
+                </div>
+                
+                <div class="format-rule">
+                    <div class="rule-title">Flat Field</div>
+                    <div class="rule-examples">
+                        <span class="valid-example">✅ 302, 101+102</span>
+                        <span class="invalid-example">❌ Flat 302, A-101</span>
+                    </div>
+                    <small>Numbers, plus signs, and hyphens only</small>
+                </div>
+                
+                <div class="format-rule">
+                    <div class="rule-title">Amount Field</div>
+                    <div class="rule-examples">
+                        <span class="valid-example">✅ 1, 501, 1001</span>
+                        <span class="invalid-example">❌ 0, 1000001</span>
+                    </div>
+                    <small>Between ₹1 and ₹10,00,000</small>
+                </div>
+                
+                <div class="format-rule">
+                    <div class="rule-title">Generated ID Format</div>
+                    <div class="rule-examples">
+                        <span class="valid-example">✅ GP1737889200000ABC</span>
+                    </div>
+                    <small>Auto-generated: GP + 13 digits + 3 letters</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="donation.html" class="demo-button">
+                <i class="fas fa-heart"></i> Try the Real Form Now
+            </a>
+            <div style="margin-top: 1rem;">
+                <small style="color: #666;">Use the examples above to fill the form correctly</small>
+            </div>
+        </div>
+
+        <!-- Quick Copy Section -->
+        <div style="background: #e7f3ff; padding: 2rem; border-radius: 12px; margin-top: 3rem; border-left: 4px solid #007bff;">
+            <h3><i class="fas fa-copy"></i> Quick Copy Template</h3>
+            <p>Copy and paste this template, then modify with your details:</p>
+            <div style="background: white; padding: 1.5rem; border-radius: 8px; font-family: monospace; margin-top: 1rem;">
+                <div>Name: Rajesh Kumar</div>
+                <div>Email: rajesh@example.com</div>
+                <div>Phone: +91 98765 43210</div>
+                <div>Wing: A</div>
+                <div>Floor: 3</div>
+                <div>Flat: 302</div>
+                <div>Amount: 1001</div>
+                <div>Payment Mode: UPI</div>
+                <div>Date: Today's date</div>
+                <div>Note: Ganpati Bappa Morya</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-om"></i> Ganpati Tracker</h3>
+                    <p>Making donations easy and transparent.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ganpati Tracker. Made with ❤️ for Lord Ganpati</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔱 Sanatan - Eternal Wisdom of Hindu Dharma - Ganpati Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="sanatan-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-om"></i>
+                <span>Ganpati Tracker</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donation.html" class="nav-link">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="expenses.html" class="nav-link">Expenses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="receipts.html" class="nav-link">Receipts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sanatan.html" class="nav-link active">Sanatan</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about-us.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact-us.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sanatan Header -->
+    <section class="sanatan-header">
+        <div class="container">
+            <h1>🕉️ Sanatan Dharma</h1>
+            <p class="sanskrit-text">Satyam Shivam Sundaram</p>
+            <p class="translation">Truth, Auspiciousness, Beauty - The eternal path of righteousness</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Sanatan Dharma</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sanatan Dharma Section -->
+    <section class="content-section">
+        <div class="sanatan-content">
+            <!-- Today's Tithi & Quick Access -->
+            <div class="today-section">
+                <div class="today-card">
+                    <div class="today-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <h2>Today's Tithi</h2>
+                    <div id="today-tithi" class="tithi-display">
+                        <span class="tithi-name">Shukla Paksha Dwitiya</span>
+                        <span class="tithi-date">28th July 2025</span>
+                    </div>
+                    <div class="suggested-ritual">
+                        <h4>Today's Ritual</h4>
+                        <p>Ganesh Puja and Evening Aarti</p>
+                    </div>
+                </div>
+                <div class="quick-access">
+                    <h3>Quick Access</h3>
+                    <div class="quick-links">
+                        <a href="#festivals" class="quick-link">
+                            <i class="fas fa-star"></i>
+                            <span>Festivals</span>
+                        </a>
+                        <a href="#rituals" class="quick-link">
+                            <i class="fas fa-hands-praying"></i>
+                            <span>Rituals</span>
+                        </a>
+                        <a href="#mantras" class="quick-link">
+                            <i class="fas fa-om"></i>
+                            <span>Mantras</span>
+                        </a>
+                        <a href="#calendar" class="quick-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hindu Festivals A-Z -->
+            <div id="festivals" class="dharma-section">
+                <h2>🌟 Hindu Festivals (A to Z)</h2>
+                <div class="alphabet-filter">
+                    <button class="alphabet-btn active" onclick="filterFestivals('all')">All</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('A')">A</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('B')">B</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('C')">C</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('D')">D</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('E')">E</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('F')">F</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('G')">G</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('H')">H</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('I')">I</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('J')">J</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('K')">K</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('L')">L</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('M')">M</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('N')">N</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('O')">O</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('P')">P</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('R')">R</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('S')">S</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('T')">T</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('U')">U</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('V')">V</button>
+                    <button class="alphabet-btn" onclick="filterFestivals('Y')">Y</button>
+                </div>
+                
+                <div class="festivals-grid" id="festivals-grid">
+                    <!-- Festival cards will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Hindu Rituals by Category -->
+            <div id="rituals" class="dharma-section">
+                <h2>🙏 Hindu Rituals & Sanskars</h2>
+                <div class="ritual-categories">
+                    <div class="ritual-category">
+                        <div class="category-header" onclick="toggleCategory('lifecycle')">
+                            <h3><i class="fas fa-baby"></i> Life Cycle Rituals (16 Sanskars)</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="category-content" id="lifecycle">
+                            <div class="ritual-grid">
+                                <div class="ritual-card" onclick="openRitualPage('namkaran-sanskar')">
+                                    <h4>Namkaran Sanskar</h4>
+                                    <p>Naming ceremony performed on the 11th day after birth</p>
+                                </div>
+                                <div class="ritual-card" onclick="openRitualModal('annaprashan')">
+                                    <h4>Annaprashan</h4>
+                                    <p>First feeding of solid food at 6 months of age</p>
+                                </div>
+                                <div class="ritual-card" onclick="openRitualModal('mundan')">
+                                    <h4>Mundan Sanskar</h4>
+                                    <p>First hair cutting ceremony for the child</p>
+                                </div>
+                                <div class="ritual-card" onclick="openRitualModal('upanayana')">
+                                    <h4>Upanayana Sanskar</h4>
+                                    <p>Sacred thread ceremony marking spiritual initiation</p>
+                                </div>
+                                <div class="ritual-card" onclick="openRitualModal('vivah')">
+                                    <h4>Vivah Sanskar</h4>
+                                    <p>Marriage rituals across different communities</p>
+                                </div>
+                                <div class="ritual-card" onclick="openRitualModal('antyeshti')">
+                                    <h4>Antyeshti Sanskar</h4>
+                                    <p>Final rites and funeral ceremonies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ritual-category">
+                        <div class="category-header" onclick="toggleCategory('daily')">
+                            <h3><i class="fas fa-sun"></i> Daily Worship Rituals</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="category-content" id="daily">
+                            <div class="ritual-grid">
+                                <div class="ritual-card" onclick="openRitualModal('sandhya')">
+                                    <h4>Sandhya Vandana</h4>
+                                    <p>Morning, noon and evening prayers</p>
+                                </div>
+                                <div class="ritual-card" onclick="openRitualModal('panchopchar')">
+                                    <h4>Panchopchar Puja</h4>
+                                    <p>Five-step worship ritual for deities</p>
+                                </div>
+                                <div class="ritual-card" onclick="openRitualModal('aarti')">
+                                    <h4>Aarti Vidhi</h4>
+                                    <p>Devotional songs for various deities</p>
+                                </div>
+                                <div class="ritual-card" onclick="openRitualModal('tulsi')">
+                                    <h4>Tulsi Puja</h4>
+                                    <p>Daily worship of sacred Tulsi plant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ritual-category">
+                        <div class="category-header" onclick="toggleCategory('regional')">
+                            <h3><i class="fas fa-map-marked-alt"></i> Regional Traditions</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="category-content" id="regional">
+                            <div class="ritual-grid">
+                                <div class="ritual-card" onclick="openRitualModal('chhath')">
+                                    <h4>Chhath Puja (Bihar)</h4>
+                                    <p>Worship of Sun God with river rituals</p>
+                                </div>
+                                <div class="ritual-card" onclick="openRitualModal('durga-path')">
+                                    <h4>Durga Path (Bengal)</h4>
+                                    <p>Goddess Durga worship traditions</p>
+                                </div>
+                                <div class="ritual-card" onclick="openRitualModal('gauri-pujan')">
+                                    <h4>Gauri Pujan (Maharashtra)</h4>
+                                    <p>Worship of Goddess Gauri</p>
+                                </div>
+                                <div class="ritual-card" onclick="openRitualModal('tamil-homam')">
+                                    <h4>Ganapati Homam (Tamil)</h4>
+                                    <p>South Indian fire ritual traditions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mantras & Stotras -->
+            <div id="mantras" class="mantra-section">
+                <div class="container">
+                    <h2>🕉️ Sacred Mantras & Stotras</h2>
+                    <div class="mantra-text">ॐ गं गणपतये नमः</div>
+                    <div class="mantra-meaning">Om Gam Ganapataye Namaha - Salutations to Lord Ganesha</div>
+                </div>
+            </div>
+            
+            <!-- Mantra Collection -->
+            <div class="dharma-section">
+                <h2>📿 Mantra Collection</h2>
+                <div class="mantra-categories">
+                    <div class="mantra-tab-buttons">
+                        <button class="mantra-tab active" onclick="showMantraTab('ganesh')">Ganesh Mantras</button>
+                        <button class="mantra-tab" onclick="showMantraTab('shiva')">Shiva Mantras</button>
+                        <button class="mantra-tab" onclick="showMantraTab('vishnu')">Vishnu Mantras</button>
+                        <button class="mantra-tab" onclick="showMantraTab('devi')">Devi Mantras</button>
+                        <button class="mantra-tab" onclick="showMantraTab('surya')">Surya Mantras</button>
+                    </div>
+                    
+                    <div class="mantra-content">
+                        <div id="ganesh-mantras" class="mantra-tab-content active">
+                            <div class="mantra-card">
+                                <h4>Ganesh Gayatri Mantra</h4>
+                                <div class="mantra-text">
+                                    <p class="sanskrit">ॐ एकदन्ताय विद्महे वक्रतुण्डाय धीमहि तन्नो दन्ति प्रचोदयात्॥</p>
+                                    <p class="meaning">Meaning: We know the one-tusked Lord, we meditate on the curved-trunk deity, may that tusked one inspire our intellect.</p>
+                                </div>
+                                <div class="mantra-audio">
+                                    <button class="play-btn" onclick="playMantra('ganesh-gayatri')">
+                                        <i class="fas fa-play"></i> Listen
+                                    </button>
+                                    <button class="download-btn" onclick="downloadMantra('ganesh-gayatri')">
+                                        <i class="fas fa-download"></i> Download
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Hindu Calendar -->
+            <div id="calendar" class="calendar-section">
+                <h2><i class="fas fa-calendar-alt"></i> Hindu Panchang Calendar</h2>
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button onclick="previousMonth()" class="nav-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h3 id="calendar-month-year">Shravan 2081 (July 2025)</h3>
+                        <button onclick="nextMonth()" class="nav-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="calendar-grid" id="calendar-grid">
+                        <!-- Calendar will be populated by JavaScript -->
+                    </div>
+                    <div class="calendar-legend">
+                        <div class="legend-item">
+                            <span class="legend-color festival"></span>
+                            <span>Festivals</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color ekadashi"></span>
+                            <span>Ekadashi</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color amavasya"></span>
+                            <span>New Moon</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color purnima"></span>
+                            <span>Full Moon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Zone -->
+            <div class="download-section">
+                <h2><i class="fas fa-download"></i> Download Zone</h2>
+                <div class="download-grid">
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h4>Vrat Katha Collection</h4>
+                        <p>Stories of all major Hindu fasts in PDF format</p>
+                        <button class="download-btn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4>Mantra Charts</h4>
+                        <p>Daily worship mantra collection</p>
+                        <button class="download-btn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <h4>Panchang 2025</h4>
+                        <p>Complete Hindu calendar for the year</p>
+                        <button class="download-btn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>Puja Vidhi Guide</h4>
+                        <p>Complete worship procedure information</p>
+                        <button class="download-btn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Filters -->
+            <div class="regional-section">
+                <h2><i class="fas fa-map-marked-alt"></i> Regional Traditions</h2>
+                <div class="region-filters">
+                    <button class="region-btn active" onclick="filterByRegion('all')">All</button>
+                    <button class="region-btn" onclick="filterByRegion('north')">North India</button>
+                    <button class="region-btn" onclick="filterByRegion('south')">South India</button>
+                    <button class="region-btn" onclick="filterByRegion('east')">East India</button>
+                    <button class="region-btn" onclick="filterByRegion('west')">West India</button>
+                    <button class="region-btn" onclick="filterByRegion('central')">Central India</button>
+                </div>
+                <div class="regional-content" id="regional-content">
+                    <!-- Regional content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ritual Modal -->
+    <div id="ritual-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRitualModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-om"></i> Ganpati Tracker</h3>
+                    <p>Celebrating Lord Ganpati with devotion, transparency, and community spirit.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="donation.html">Make Donation</a></li>
+                        <li><a href="expenses.html">View Expenses</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@ganpatitracker.com</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ganpati Tracker. Made with ❤️ for Lord Ganpati</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Enhanced Festival data with more details
+        const festivals = [
+            {name: "Akshaya Tritiya", letter: "A", date: "2025-05-02", description: "Worship of Lord Vishnu and Goddess Lakshmi", category: "Vaishnav", region: "All over India"},
+            {name: "Ahoi Ashtami", letter: "A", date: "2025-10-24", description: "Fast for children's well-being and prosperity", category: "Fasting", region: "North India"},
+            {name: "Ashadhi Ekadashi", letter: "A", date: "2025-07-17", description: "Special worship of Lord Vishnu", category: "Ekadashi", region: "Maharashtra"},
+            {name: "Indra Puja", letter: "I", date: "2025-09-15", description: "Worship of Indra, the God of Rain", category: "Natural", region: "Bihar, Jharkhand"},
+            {name: "Ugadi", letter: "U", date: "2025-03-30", description: "South Indian New Year", category: "New Year", region: "Andhra Pradesh, Telangana"},
+            {name: "Ekadashi", letter: "E", date: "Every month", description: "Fast dedicated to Lord Vishnu", category: "Fasting", region: "All over India"},
+            {name: "Karva Chauth", letter: "K", date: "2025-11-01", description: "Fast for husband's long life", category: "Fasting", region: "North India"},
+            {name: "Krishna Janmashtami", letter: "K", date: "2025-08-26", description: "Birth celebration of Lord Krishna", category: "Birth Festival", region: "All over India"},
+            {name: "Ganesh Chaturthi", letter: "G", date: "2025-08-29", description: "Birth celebration of Lord Ganesha", category: "Birth Festival", region: "Maharashtra, South India"},
+            {name: "Guru Purnima", letter: "G", date: "2025-07-13", description: "Day to honor the Guru", category: "Guru Worship", region: "All over India"},
+            {name: "Chhath Puja", letter: "C", date: "2025-11-07", description: "Worship of Sun God", category: "Sun Worship", region: "Bihar, Uttar Pradesh"},
+            {name: "Janmashtami", letter: "J", date: "2025-08-26", description: "Birth of Lord Krishna", category: "Birth Festival", region: "All over India"},
+            {name: "Teej", letter: "T", date: "2025-08-19", description: "Festival for married women", category: "Fasting", region: "Rajasthan, Uttar Pradesh"},
+            {name: "Diwali", letter: "D", date: "2025-10-31", description: "Festival of Lights", category: "Major Festival", region: "All over India"},
+            {name: "Durga Puja", letter: "D", date: "2025-10-10", description: "Worship of Goddess Durga", category: "Goddess Worship", region: "West Bengal, East India"},
+            {name: "Navratri", letter: "N", date: "2025-10-03", description: "Nine forms of Goddess", category: "Goddess Worship", region: "Gujarat, Rajasthan"},
+            {name: "Pongal", letter: "P", date: "2025-01-14", description: "Tamil New Year", category: "New Year", region: "Tamil Nadu"},
+            {name: "Baisakhi", letter: "B", date: "2025-04-13", description: "Harvest Festival", category: "Agricultural Festival", region: "Punjab, Haryana"},
+            {name: "Maha Shivratri", letter: "M", date: "2025-02-26", description: "Great night of Lord Shiva", category: "Shaiva", region: "All over India"},
+            {name: "Makar Sankranti", letter: "M", date: "2025-01-14", description: "Sun's entry into Capricorn", category: "Sun Worship", region: "All over India"},
+            {name: "Ram Navami", letter: "R", date: "2025-04-06", description: "Birth celebration of Lord Rama", category: "Birth Festival", region: "All over India"},
+            {name: "Raksha Bandhan", letter: "R", date: "2025-08-19", description: "Sacred festival of brother-sister", category: "Family", region: "North India"},
+            {name: "Vat Purnima", letter: "V", date: "2025-06-11", description: "Fast for husband's long life", category: "Fasting", region: "Maharashtra, Gujarat"},
+            {name: "Shivratri", letter: "S", date: "2025-02-26", description: "Worship of Lord Shiva", category: "Shaiva", region: "All over India"},
+            {name: "Saraswati Puja", letter: "S", date: "2025-02-03", description: "Worship of Goddess of Knowledge", category: "Goddess Worship", region: "West Bengal"},
+            {name: "Holi", letter: "H", date: "2025-03-14", description: "Festival of Colors", category: "Major Festival", region: "North India"}
+        ];
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            displayFestivals('all');
+            initializeCalendar();
+            updateTodayTithi();
+        });
+
+        // Filter festivals by letter
+        function filterFestivals(letter) {
+            // Update active button
+            document.querySelectorAll('.alphabet-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            displayFestivals(letter);
+        }
+
+        // Display festivals
+        function displayFestivals(letter) {
+            const grid = document.getElementById('festivals-grid');
+            const filteredFestivals = letter === 'all' ? festivals : festivals.filter(f => f.letter === letter);
+            
+            grid.innerHTML = filteredFestivals.map(festival => `
+                <div class="festival-card" onclick="openFestivalPage('${festival.name}')">
+                    <div class="festival-header">
+                        <h4>${festival.name}</h4>
+                        <span class="festival-date">${festival.date}</span>
+                    </div>
+                    <p>${festival.description}</p>
+                    <div class="festival-meta">
+                        <span class="festival-category">${festival.category}</span>
+                        <span class="festival-region">${festival.region}</span>
+                    </div>
+                    <div class="festival-actions">
+                        <button class="festival-btn">Read More</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Toggle ritual category
+        function toggleCategory(categoryId) {
+            const content = document.getElementById(categoryId);
+            const header = content.previousElementSibling;
+            const icon = header.querySelector('.fa-chevron-down');
+            
+            content.classList.toggle('active');
+            icon.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+
+        // Open ritual modal
+        function openRitualModal(ritualId) {
+            const modal = document.getElementById('ritual-modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            // Sample ritual data
+            const ritualData = {
+                'namkaran': {
+                    title: 'Namkaran Sanskar',
+                    description: 'Sacred naming ceremony performed on the 11th day after birth',
+                    procedure: [
+                        'Worship Lord Ganesha',
+                        'Invoke the family deity',
+                        'Choose an auspicious name with astrologer',
+                        'Complete the ceremony with name pronunciation'
+                    ],
+                    materials: ['Kalash', 'Rice', 'Flowers', 'Roli', 'Sweets'],
+                    mantra: 'Om Gam Ganapataye Namah'
+                }
+            };
+            
+            const ritual = ritualData[ritualId] || ritualData['namkaran'];
+            
+            modalBody.innerHTML = `
+                <h2>${ritual.title}</h2>
+                <p>${ritual.description}</p>
+                <h3>Procedure:</h3>
+                <ol>
+                    ${ritual.procedure.map(step => `<li>${step}</li>`).join('')}
+                </ol>
+                <h3>Required Materials:</h3>
+                <ul>
+                    ${ritual.materials.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+                <h3>Mantra:</h3>
+                <p class="mantra">${ritual.mantra}</p>
+            `;
+            
+            modal.style.display = 'block';
+        }
+
+        // Close ritual modal
+        function closeRitualModal() {
+            document.getElementById('ritual-modal').style.display = 'none';
+        }
+
+        // Show mantra tab
+        function showMantraTab(category) {
+            // Update active tab
+            document.querySelectorAll('.mantra-tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Hide all content
+            document.querySelectorAll('.mantra-tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Show selected content
+            document.getElementById(category + '-mantras').classList.add('active');
+        }
+
+        // Calendar functions
+        function initializeCalendar() {
+            displayCalendar(new Date());
+        }
+
+        function displayCalendar(date) {
+            console.log('Displaying calendar for:', date);
+        }
+
+        function previousMonth() {
+            console.log('Previous month');
+        }
+
+        function nextMonth() {
+            console.log('Next month');
+        }
+
+        // Update today's tithi
+        function updateTodayTithi() {
+            const today = new Date();
+            const tithiDisplay = document.getElementById('today-tithi');
+        }
+
+        // Regional filter
+        function filterByRegion(region) {
+            document.querySelectorAll('.region-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            console.log('Filtering by region:', region);
+        }
+
+        // Audio functions
+        function playMantra(mantraId) {
+            console.log('Playing mantra:', mantraId);
+        }
+
+        function downloadMantra(mantraId) {
+            console.log('Downloading mantra:', mantraId);
+        }
+
+        // Festival page navigation
+        function openFestivalPage(festivalName) {
+            const festivalPages = {
+                'Ganesh Chaturthi': 'festivals/ganesh-chaturthi.html',
+                'Diwali': 'festivals/diwali.html',
+                'Holi': 'festivals/holi.html',
+                'Durga Puja': 'festivals/durga-puja.html',
+                'Navratri': 'festivals/navratri.html',
+                'Krishna Janmashtami': 'festivals/krishna-janmashtami.html',
+                'Ram Navami': 'festivals/ram-navami.html',
+                'Maha Shivratri': 'festivals/maha-shivratri.html'
+            };
+            
+            if (festivalPages[festivalName]) {
+                window.location.href = festivalPages[festivalName];
+            } else {
+                // For festivals without dedicated pages, show modal
+                openFestivalModal(festivalName);
+            }
+        }
+
+        // Ritual page navigation
+        function openRitualPage(ritualName) {
+            const ritualPages = {
+                'namkaran-sanskar': 'rituals/namkaran-sanskar.html',
+                'annaprashan': 'rituals/annaprashan.html',
+                'mundan': 'rituals/mundan-sanskar.html',
+                'upanayana': 'rituals/upanayana-sanskar.html',
+                'vivah': 'rituals/vivah-sanskar.html',
+                'antyeshti': 'rituals/antyeshti-sanskar.html'
+            };
+            
+            if (ritualPages[ritualName]) {
+                window.location.href = ritualPages[ritualName];
+            } else {
+                // For rituals without dedicated pages, show modal
+                openRitualModal(ritualName);
+            }
+        }
+
+        // Festival modal (for festivals without dedicated pages)
+        function openFestivalModal(festivalName) {
+            const modal = document.getElementById('ritual-modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            const festivalInfo = festivals.find(f => f.name === festivalName);
+            if (festivalInfo) {
+                modalBody.innerHTML = `
+                    <h2>${festivalInfo.name}</h2>
+                    <p><strong>Date:</strong> ${festivalInfo.date}</p>
+                    <p><strong>Description:</strong> ${festivalInfo.description}</p>
+                    <p>Detailed information for this festival will be available soon.</p>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button onclick="closeRitualModal()" class="btn btn-primary">Close</button>
+                    </div>
+                `;
+                modal.style.display = 'block';
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('ritual-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+    
+    <style>
+        /* Enhanced Sanatan Page Styling */
+        .sanatan-page {
+            background: linear-gradient(135deg, #fff5f0, #ffeee6);
+        }
+
+        .sanatan-header {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sanatan-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="20" fill="rgba(255,255,255,0.1)">🕉️</text></svg>') repeat;
+            opacity: 0.1;
+        }
+
+        .sanatan-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sanskrit-text {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        .translation {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .breadcrumb {
+            position: relative;
+            z-index: 2;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 1;
+        }
+
+        .breadcrumb i {
+            margin: 0 1rem;
+            opacity: 0.6;
+        }
+
+        /* Today Section */
+        .today-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            padding: 0 2rem;
+        }
+
+        .today-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .today-icon {
+            font-size: 4rem;
+            color: #ff6b35;
+            margin-bottom: 1.5rem;
+        }
+
+        .tithi-display {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .tithi-name {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+        }
+
+        .tithi-date {
+            display: block;
+            color: #666;
+        }
+
+        .suggested-ritual {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .suggested-ritual h4 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .quick-access {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .quick-links {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .quick-link {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border-left: 3px solid #ff6b35;
+        }
+
+        .quick-link:hover {
+            background: #ff6b35;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .quick-link i {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: #ff6b35;
+        }
+
+        .quick-link:hover i {
+            color: white;
+        }
+
+        /* Dharma Sections */
+        .dharma-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 0 2rem 4rem 2rem;
+        }
+
+        .dharma-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        /* Alphabet Filter */
+        .alphabet-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .alphabet-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #ff6b35;
+            background: white;
+            color: #ff6b35;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .alphabet-btn:hover,
+        .alphabet-btn.active {
+            background: #ff6b35;
+            color: white;
+        }
+
+        /* Festivals Grid */
+        .festivals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .festival-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .festival-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+        }
+
+        .festival-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .festival-header h4 {
+            color: #333;
+            margin: 0;
+        }
+
+        .festival-date {
+            background: #ff6b35;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .festival-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .festival-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .festival-category, .festival-region {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .festival-region {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .festival-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .festival-btn:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        /* Ritual Categories */
+        .ritual-categories {
+            margin-top: 2rem;
+        }
+
+        .ritual-category {
+            margin-bottom: 2rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .category-header {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .category-header:hover {
+            background: #ff6b35;
+            color: white;
+        }
+
+        .category-header h3 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .category-header h3 i {
+            margin-right: 1rem;
+            color: #ff6b35;
+        }
+
+        .category-header:hover h3 i {
+            color: white;
+        }
+
+        .category-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .category-content.active {
+            max-height: 1000px;
+        }
+
+        .ritual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        .ritual-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+            border-left: 3px solid #ff6b35;
+        }
+
+        .ritual-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+
+        .ritual-card h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .ritual-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Mantra Section */
+        .mantra-section {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .mantra-text {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .mantra-meaning {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Mantra Tabs */
+        .mantra-tab-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .mantra-tab {
+            padding: 1rem 2rem;
+            border: 2px solid #ff6b35;
+            background: white;
+            color: #ff6b35;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .mantra-tab:hover,
+        .mantra-tab.active {
+            background: #ff6b35;
+            color: white;
+        }
+
+        .mantra-tab-content {
+            display: none;
+        }
+
+        .mantra-tab-content.active {
+            display: block;
+        }
+
+        .mantra-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .mantra-card h4 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .mantra-card .sanskrit {
+            font-size: 1.5rem;
+            color: #ff6b35;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .mantra-card .meaning {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .mantra-audio {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .play-btn, .download-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .play-btn {
+            background: #ff6b35;
+            color: white;
+        }
+
+        .download-btn {
+            background: #28a745;
+            color: white;
+        }
+
+        .play-btn:hover, .download-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Calendar Section */
+        .calendar-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 0 2rem 4rem 2rem;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .nav-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #e55a2b;
+            transform: scale(1.1);
+        }
+
+        .calendar-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .legend-color.festival { background: #ff6b35; }
+        .legend-color.ekadashi { background: #28a745; }
+        .legend-color.amavasya { background: #6c757d; }
+        .legend-color.purnima { background: #ffc107; }
+
+        /* Download Section */
+        .download-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 0 2rem 4rem 2rem;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .download-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .download-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+        }
+
+        .download-icon {
+            font-size: 3rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        .download-card h4 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .download-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .download-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .download-btn:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        /* Regional Section */
+        .regional-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 0 2rem 4rem 2rem;
+        }
+
+        .region-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .region-btn {
+            padding: 1rem 2rem;
+            border: 2px solid #ff6b35;
+            background: white;
+            color: #ff6b35;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .region-btn:hover,
+        .region-btn.active {
+            background: #ff6b35;
+            color: white;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .close:hover {
+            color: #333;
+        }
+
+        .modal h2 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        .modal .mantra {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: #ff6b35;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .today-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .sanatan-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .sanskrit-text {
+                font-size: 1.5rem;
+            }
+            
+            .mantra-text {
+                font-size: 2rem;
+            }
+            
+            .alphabet-filter {
+                gap: 0.3rem;
+            }
+            
+            .alphabet-btn {
+                padding: 0.3rem 0.8rem;
+                font-size: 0.9rem;
+            }
+            
+            .festivals-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ritual-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mantra-tab-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .region-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</body>
+</html>
